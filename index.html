@@ -14,16 +14,20 @@
 </head>
 <body>
     <header class="header container">
-        <div class="header_top">
+        <div class="header_top menu">
             <a class="header_top_logo" href="#"><img src="img/logo.svg" alt="logo"></a>
-            <nav class="header_top_nav">
-                <a class="header_top_link" href="#">Home</a>
-                <a class="header_top_link" href="#">About</a>
-                <a class="header_top_link" href="#">Discover</a>
-                <a class="header_top_link" href="#">Creator</a>
-                <a class="header_top_link" href="#">Collectors</a>
+            <nav class="header_top_nav menu-popup">
+                <a class="menu-close" href="#"></a>
+                <ul class="header_top_nav_ul">
+                    <li><a class="header_top_link" href="#">Home</a></li>
+                    <li><a class="header_top_link" href="#">About</a></li>
+                    <li><a class="header_top_link" href="#">Discover</a></li>
+                    <li><a class="header_top_link" href="#">Creator</a></li>
+                    <li><a class="header_top_link" href="#">Collectors</a></li>
+                </ul>
             </nav>
             <a href="#" class="btn_accent">Launch dApp</a>
+            <a class="menu-triger" href="#"></a>
         </div>
         <div class="header-content">
             <span>Explorer</span>
@@ -83,55 +87,52 @@
         </div>
     </section>
     <section class="token container">
-        <div class="token__top">
-            <div class="token__text">
-                <span>NFT & Token
+        <div class="token__text">
+                <span>NFT & Token<br>
                     Deflation System </span>
-                <p>Nec ipsum vitae malesuada mi aenean enim fermentum ultrices. Interdum luctus viverra risus nunc accumsan risus, blandit dui urna. Etiam magna et quam quam at sit risus.</p>
-            </div>
-            <div class="token__card">
-                <div class="token__card-img">
-                    <img src="img/token-card1.svg" alt="token">
-                </div>    
-                <div class="token__card-text">
-                    <span>Eget amet fermentum dui</span>
-                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
-                </div>
-            </div>
+                <p>Nec ipsum vitae malesuada mi aenean enim fermentum<br> ultrices. Interdum luctus viverra risus nunc accumsan risus,<br> blandit dui urna. Etiam magna et quam quam at sit risus.</p>
         </div>
-        <div class="token__bot">
-            <div class="token__card">
+        <div class="token__card">
                 <div class="token__card-img">
-                    <img class="token__card-img-archer" src="img/token-card2.svg" alt="token">
+                    <img src="../explorer/img/token-card1.svg" alt="token">
                 </div>    
                 <div class="token__card-text">
                     <span>Eget amet fermentum dui</span>
                     <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
                 </div>
-            </div>
-            <div class="token__card">
-                <div class="token__card-img">
-                    <img src="img/token-card3.svg" alt="token">
-                </div>    
-                <div class="token__card-text">
-                    <span>Eget amet fermentum dui</span>
-                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
-                </div>
-            </div>
-            <div class="token__card">
-                <div class="token__card-img">
-                    <img src="img/token-card4.svg" alt="token">
-                </div>    
-                <div class="token__card-text">
-                    <span>Eget amet fermentum dui</span>
-                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
-                </div>
-            </div>
         </div>
+        <div class="token__card">
+                <div class="token__card-img">
+                    <img class="token__card-img-archer" src="../explorer/img/token-card2.svg" alt="token">
+                </div>    
+                <div class="token__card-text">
+                    <span>Eget amet fermentum dui</span>
+                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
+                </div>
+        </div>
+        <div class="token__card">
+                <div class="token__card-img">
+                    <img src="../explorer/img/token-card3.svg" alt="token">
+                </div>    
+                <div class="token__card-text">
+                    <span>Eget amet fermentum dui</span>
+                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
+                </div>
+        </div>
+        <div class="token__card">
+                <div class="token__card-img">
+                    <img src="../explorer/img/token-card4.svg" alt="token">
+                </div>    
+                <div class="token__card-text">
+                    <span>Eget amet fermentum dui</span>
+                    <p>Cursus imperdiet posuere dictum quam eleifend varius pellentesque lectus.</p>
+                </div>
+        </div>
+    </section>
     </section>
     <section class="email container">
         <div class="email-block">    
-            <span class="email-span">Felis, molestie ac ipsum, vivamus nec aliquam sed porttitor quis ac</span>
+            <span class="email-span">Felis, molestie ac ipsum, vivamus<br> nec aliquam sed porttitor quis ac</span>
             <form class="email-form">
                 <input class="email-input" type="email" placeholder="hola@gmail.com"><button class="email-btn" type="submit">Sign up</button>
             </form>
@@ -177,5 +178,46 @@
             <span>Copyright © 2021 Middle Earth. All rights reserved.</span>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+	var $menu_popup = $('.menu-popup');
+ 
+	$(".menu-triger").click(function(){
+		$('body').addClass('body_pointer');		
+		$menu_popup.show(0);
+		$menu_popup.animate(
+			{right: parseInt($menu_popup.css('left'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+			300
+		);
+		return false;
+	});	
+	
+	$(".menu-close").click(function(){
+		$('body').removeClass('body_pointer');		
+		$menu_popup.animate(
+			{right: parseInt($menu_popup.css('right'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+			300, 
+			function(){
+				$menu_popup.hide(0);
+			}
+		);
+		return false;
+	});	
+	
+	$(document).on('click', function(e){
+		if (!$(e.target).closest('.menu-popup').length){
+			$('body').removeClass('body_pointer');
+			$menu_popup.animate(
+				{right: parseInt($menu_popup.css('right'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+				300, 
+				function(){
+					$menu_popup.hide(0);
+				}
+			);
+		}
+	});
+});
+    </script>
 </body>
 </html>
