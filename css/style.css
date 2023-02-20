@@ -571,7 +571,7 @@ li {
     grid-column: span 4;
   }
   .header-content h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .medieval__item {
     width: 100%;
@@ -581,5 +581,39 @@ li {
   }
   .partners {
     padding: 5.57vh 0;
+  }
+  .header-content {
+    width: 100%;
+  }
+  .viewmore-btn {
+    display: block;
+    text-align: center;
+    margin: 0 10vw;
+    white-space: nowrap;
+  }
+  .token {
+    background: #15181F;
+  }
+  .token__text span {
+    font-size: 34px;
+  }
+  .email {
+    background: none;
+    padding: 80px 7vw;
+  }
+  .email-input {
+    padding: 4px 2vw;
+  }
+  .email-span {
+    font-size: 19px;
+  }
+  .footer-top-social {
+    gap: 20px;
+  }
+  .footer-nav-title {
+    font-size: 14px;
+  }
+  .footer-nav-link {
+    font-size: 11px;
   }
 }/*# sourceMappingURL=style.css.map */
