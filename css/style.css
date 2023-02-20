@@ -603,6 +603,7 @@ li {
   }
   .email-input {
     padding: 4px 2vw;
+    font-style: 13px;
   }
   .email-span {
     font-size: 19px;
